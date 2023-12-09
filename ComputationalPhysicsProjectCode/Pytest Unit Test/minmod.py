@@ -25,7 +25,3 @@ def minmod(x,y,z):
     
     return 0.25*np.abs(np.sign(x) + np.sign(y))*(np.sign(x) + np.sign(z))*min_xyz
 
-print(minmod(1,1,1))
-print(minmod(1,-2,1))
-print(minmod(-5,-1,6))
-print(minmod(-1,-1,-1))
