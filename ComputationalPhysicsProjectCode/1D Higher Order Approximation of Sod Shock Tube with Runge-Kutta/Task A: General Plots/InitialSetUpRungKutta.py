@@ -211,7 +211,7 @@ x, d2 = MP.ReadAndReturnData(fileList[3])
 x, d3 = MP.ReadAndReturnData(fileList[6])
 x, d4 = MP.ReadAndReturnData(fileList[9])
 x, d5 = MP.ReadAndReturnData(fileList[12])
-MP.MakeFigure(x, d1, d2, d3, d4, d5, 'Position (meters)', 'Density (kg per cubic meter)', 'Densities Over Time for Grid Size = 400 Runge-Kutta', [str(savedTimes[0]) + ' sec', str(savedTimes[1]) + ' sec', str(savedTimes[2]) + ' sec', str(savedTimes[3]) + ' sec', str(savedTimes[4]) + ' sec'], 'RungeKattaDensitiesGridSize=400.png')
+MP.MakeFigure(x, d1, d2, d3, d4, d5, 'Position (meters)', 'Density (kg per cubic meter)', 'Densities Over Time for Grid Size = 400 Runge-Kutta', [str(savedTimes[0]) + ' sec', str(savedTimes[1]) + ' sec', str(savedTimes[2]) + ' sec', str(savedTimes[3]) + ' sec', str(savedTimes[4]) + ' sec'], 'RungeKuttaDensitiesGridSize=400.png')
 
 x, v1 = MP.ReadAndReturnData(fileList[1])
 x, v2 = MP.ReadAndReturnData(fileList[4])
