@@ -45,9 +45,8 @@ def ReadAndReturnData(filename):
 
 def MakeFigure(arr1A, arr2A, arr1B, arr2B, arr3B, arr4B, arr5B, xlabel, ylabel, zlabel, title, legend, saveName):
     '''
-    Function that makes and saves a plot of four kinds of dependent variables with a common
-    independent variable. In other words, the size of the array of independent variables is 
-    the same for all cases.  
+    Function that makes and saves a plot of five kinds of dependent variables with a common set
+    of bipartite independent variable (ex: x and y). 
 
     Parameters:
     -------------
