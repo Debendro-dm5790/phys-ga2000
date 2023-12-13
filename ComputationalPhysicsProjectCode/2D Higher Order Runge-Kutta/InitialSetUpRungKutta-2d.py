@@ -78,7 +78,7 @@ if(task == 3):
 	savedTimes = np.array([0,0.04,0.06,0.08,0.2], dtype = np.float32)
 
 '''
-Begin the simulation of the 1D Riemann Problem with the higher order Runge-Kutta method
+Begin the simulation of the 2D Riemann Problem with the higher order Runge-Kutta method
 by initializing the system and getting and saving the initial values.
 '''
 xList, yList, tList = Init.createSpaceTimeGrid(length, numPoints, timePoints, spaceDim)
