@@ -68,10 +68,10 @@ def setInitialVals(task, g, numPoints, v0x, v0y, rhoL, rhoR, PressL, PressR): #s
                 This is the adiabatic constant of the system
                 
     numPoints:  (even) integer
-                the total number of points in each (u1, u2, u3) parameter grid
+                the total number of points in each (u1, u2, u3, u4) parameter grid
                 evenness will be checked and an exception could be raised
-                SHOULD BE 2 MORE than the total number of points in each spatial grid
-                in order to include the boundary for the ONE-DIMENSIONAL PROBLEM
+                SHOULD BE 4 MORE than the total number of points in each spatial grid
+                direction in order to include the boundary for the TWO-DIMENSIONAL PROBLEM 
                 
     v0x:        (ideally) 32-bit floating point number
                 The initial x-velocity of the system. 
@@ -105,6 +105,30 @@ def setInitialVals(task, g, numPoints, v0x, v0y, rhoL, rhoR, PressL, PressR): #s
     u4 :                    numpy array of 32-bit floats
                             Array of initial energy density values
     
+    Comment
+    --------
+    We note that each of the returns is a two-dimensional array whose columns are associated
+    with the x direction and whose rows are associated with the y direction as shown below. We 
+    note that only the sections labelled as 'data' correspond to the elements of each returned array.
+    
+    x,y = 0     x1      x2       x3        x4        x5      x6 .....
+    
+    y1   data   data   data     data     data      data     data ....
+    
+    
+    y2   data   data   data     data     data      data     data ....
+    
+    
+    y3   data   data   data     data     data      data     data ....
+    
+    
+    y4   data   data   data     data     data      data     data ....
+    
+    
+    y5   data   data   data     data     data      data     data ....
+    .
+    .
+    .
     '''
     if numPoints%2 == 1:
         raise Exception('Number of spacial and temporal points should be even.')
